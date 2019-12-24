@@ -29,6 +29,7 @@ Markdown==3.1.1
 nltk==3.4.5
 numpy==1.17.4
 opt-einsum==3.1.0
+pandas==0.25.3
 protobuf==3.11.2
 psycopg2==2.8.4
 pymorphy2==0.8
@@ -46,12 +47,15 @@ six==1.13.0
 sklearn==0.0
 smart-open==1.9.0
 sqlparse==0.3.0
+tb-nightly==1.15.0a20190806
 tensorboard==2.0.0
-tensorflow==2.0.0b1
-tensorflow-estimator==2.0.0
+tensorflow==2.0.0
+tensorflow-estimator==1.15.1
 termcolor==1.1.0
+tf-estimator-nightly==1.14.0.dev2019080601
 urllib3==1.25.7
 Werkzeug==0.16.0
 whitenoise==5.0.1
 wincertstore==0.2
 wrapt==1.11.2
+xlrd==1.2.0
