@@ -7,7 +7,7 @@ from intents_classifier import module
 from .category_single_views import CategorySingleView
 from .models import Requests
 from .models import Categories
-import pandas as pd
+
 
 class PredictCategory(APIView):
     def get(self, request):
@@ -33,24 +33,3 @@ class PredictCategory(APIView):
         # myString = " | ".join(str(x) for x in list_categories)
         return Response({"result": "Модель переобучена"})
 
-    def post(self, request):
-        file_excel = pd.read_excel('C:/Users/Alexey/Desktop/Practice/russian_train.xlsx', sheet_name='russian_train')
-        file_excel[:6]
-        unique_intents = file_excel.columns
-        # Index(['Курс Валют', 'Прогноз Погоды', 'График Работы', 'Заказать Еду', 'Будильник', 'Учеба'], dtype='object')
-        all_texts, all_intents = [], []
-        for intent in unique_intents:
-            for text in file_excel[intent]:
-                if pd.isnull(text):
-                    break
-                else:
-                    content = text
-                    category_id = intent
-                    new_request = Requests.objects.create(content=content)
-                    new_request.is_marked_up = True
-                    new_request.save()
-                    category = Categories.objects.get(id=category_id)
-                    if category:
-                        category.requests_set.add(new_request)
-        # myString = " | ".join(str(x) for x in all_intents)
-        return Response({"result": "success"})
