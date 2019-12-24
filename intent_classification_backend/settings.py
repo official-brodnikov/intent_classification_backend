@@ -30,7 +30,7 @@ SECRET_KEY = 'z2ef&=i9-y+@30-hmswr=n5xitl4n$x@+u8fw9&c_^cr8kuf^4'
 DEBUG = config('DEBUG', cast=bool)
 
 ALLOWED_HOSTS = ['intent-classification-backend-app.herokuapp.com',
-                 'backend-practice-app.herokuapp.com',
+                 'intent-classification-backend.herokuapp.com',
                  '127.0.0.1']
 
 
