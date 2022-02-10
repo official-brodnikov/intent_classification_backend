@@ -49,7 +49,7 @@ smart-open==1.9.0
 sqlparse==0.3.0
 tb-nightly==1.15.0a20190806
 tensorboard==2.0.0
-tensorflow==2.0.0a0
+tensorflow==2.5.3
 tensorflow-estimator==1.15.1
 termcolor==1.1.0
 tf-estimator-nightly==1.14.0.dev2019080601
